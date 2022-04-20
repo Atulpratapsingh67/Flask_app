@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container cont">
+        <div class="card text-center">
+            <div class="card-header">
+            Menus
+            </div>
+            <div class="card-body">
+                <a class="btn btn-secondary" href="/admin/dashboard/employees" role="button">List all employees</a>
+                <a class="btn btn-secondary" href="/admin/dashboard/employeeDetail" role="button">Employee Details</a>
+                <a class="btn btn-secondary" href="/admin/dashboard/givepermissions" role="button">Give Admin Permissions</a>
+
+            </div>
+        </div>
+        <br><br>
+        <a class="btn btn-secondary" href="{{url_for('loggedin.logout')}}" role="button">Log out</a>
+    </div>
+    
+{% endblock %}
