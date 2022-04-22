@@ -22,8 +22,8 @@ app.register_blueprint(loggedin, url_prefix="/")
 
 # Add configurations
 app.config.from_mapping(
-    SECRET_KEY=environ.get("SECRET_KEY"),
-    SQLALCHEMY_DATABASE_URI=environ.get("SQLALCHEMY_DATABASE_URI"),
+    SECRET_KEY='ATUL',
+    SQLALCHEMY_DATABASE_URI='sqlite:///users.db',
     SQLALCHEMY_TRACK_MODIFICATIONS=False)
 
 # Login Manage
@@ -52,4 +52,4 @@ def page_not_found(error):
 if __name__ == "__main__":
     from db import db
     db.init_app(app)
-    app.run()
+    app.run(host='0.0.0.0')
